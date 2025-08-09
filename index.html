@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News Demo</title>
+
+  <!-- أيقونات -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- Particles (خفيف) -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <meta name="color-scheme" content="dark light" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <i class="fa-solid fa-radio" aria-hidden="true"></i>
+        <h1>News Demo</h1>
+      </div>
+
+      <div class="toolbar">
+        <input id="search-box" type="text" placeholder="ابحث في العناوين…" />
+        <div id="weather" title="الطقس">
+          <i id="weather-icon" class="fa-solid fa-cloud"></i>
+          <span id="weather-temp"></span>
+        </div>
+        <div id="time"></div>
+        <div id="date"></div>
+      </div>
+    </div>
+
+    <div class="ticker" id="breaking-news">
+      <div class="ticker-content" id="ticker-content">
+        <span>نسخة تجريبية لواجهة أخبار</span>
+        <span>أضف مفاتيحك لاستخدام واجهات مباشرة إن رغبت</span>
+        <span>المصادر هنا RSS عامة ومحايدة</span>
+        <span>ابحث بالأعلى لتصفية العناوين</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="icon-bar">
+      <span><i id="all-btn" class="fa-solid fa-globe"></i><span class="icon-text">الكل</span></span>
+      <span><i id="intl-btn" class="fa-solid fa-earth-africa"></i><span class="icon-text">دولي</span></span>
+      <span><i id="biz-btn" class="fa-solid fa-chart-line"></i><span class="icon-text">اقتصاد</span></span>
+      <span><i id="tech-btn" class="fa-solid fa-microchip"></i><span class="icon-text">تقنية</span></span>
+    </div>
+
+    <div id="filter-area">
+      <label for="source-filter">المصدر:</label>
+      <select id="source-filter">
+        <option value="all">عرض الكل</option>
+      </select>
+    </div>
+
+    <ul id="headlines"></ul>
+    <button id="scroll-to-top" title="للأعلى">↑</button>
+    <div id="error" style="color:#ffb3b3;font-weight:900"></div>
+  </main>
+
+  <footer>© Demo build for testing — 2025</footer>
+
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
+
